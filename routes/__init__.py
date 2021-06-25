@@ -1,1 +1,9 @@
-import routes.error_handlersimport routes.taskimport routes.trainingimport routes.behaviourimport routes.trainingbehaviourimport routes.questionsbehaviourimport routes.questionnairesbehaviour
+import routes.error_handlers
+import routes.cond_data
+import routes.outcome_test
+import routes.path_test
+import routes.tutorial_data
+import routes.task_data
+import routes.bonus
+import routes.psych_quiz
+import routes.feedback

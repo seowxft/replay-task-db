@@ -1,36 +1,47 @@
 """users routes"""
 from flask import current_app as app, jsonify, request
-from models import TrainingBehaviour, BaseObject
-
+from models import TutorialData, BaseObject, db
+from sqlalchemy.sql.expression import func
 
 @app.route('/tutorial_data/<user_id>', methods=['POST', 'GET'])
-
 def create_tutorial_data(user_id):
-
-    content                         = request.json
-    tutorial_data                   = TutorialData()
-
-    tutorial_data.userID                = int(user_id)
-    tutorial_data.tutorialSession       = str(content['tutorialSession'])
-    tutorial_data.tutorialSessionTry    = str(content['tutorialSessionTry'])
-    tutorial_data.trialNum              = str(content['trialNum'])
-    tutorial_data.trialTime             = str(content['trialTime'])
-    tutorial_data.fixTime               = str(content['fixTime'])
-    tutorial_data.attenIndex            = str(content['attenIndex'])
-    tutorial_data.attenCheckKey         = str(content['attenCheckKey'])
-    tutorial_data.attenCheckTime        = str(content['attenCheckTime'])
-    tutorial_data.stimTime              = str(content['stimTime'])
-    tutorial_data.stimIndex             = str(content['stimIndex'])
-    tutorial_data.fbProbTrack           = str(content['fbProbTrack'])
-    tutorial_data.randProb              = str(content['randProb'])
-    tutorial_data.responseKey           = str(content['responseKey'])
-    tutorial_data.reactionTime          = str(content['reactionTime'])
-    tutorial_data.responseAvoid         = str(content['responseAvoid'])
-    tutorial_data.playFbSound           = str(content['playFbSound'])
-    tutorial_data.fbTime                = str(content['fbTime'])
+    content = request.json
+    tutorial_data = TutorialData()
+    tutorial_data.userID      = str(content['userID'])
+    tutorial_data.date        = str(content['date'])
+    tutorial_data.startTime   = str(content['startTime'])
+    tutorial_data.sectionTime    = str(content['sectionTime'])
+    tutorial_data.taskSession    = str(content['taskSession'])
+    tutorial_data.taskSessionTry = str(content['taskSessionTry'])
+    tutorial_data.trialTime  = str(content['trialTime'])
+    tutorial_data.trialNum   = str(content['trialNum'])
+    tutorial_data.trialForced    = str(content['trialForced'])
+    tutorial_data.trialShuttleWord = str(content['trialShuttleWord'])
+    tutorial_data.trialShuttle  = str(content['trialShuttle'])
+    tutorial_data.trialShuttlePos = str(content['trialShuttlePos'])
+    tutorial_data.trialShuttleProb     = str(content['trialShuttleProb'])
+    tutorial_data.trialLastStatePic    = str(content['trialLastStatePic'])
+    tutorial_data.trialOutcomePic  = str(content['trialOutcomePic'])
+    tutorial_data.trialOutcomeVal     = str(content['trialOutcomeVal'])
+    tutorial_data.trialSafePath  = str(content['trialSafePath'])
+    tutorial_data.trialRiskyPath1 = str(content['trialRiskyPath1'])
+    tutorial_data.trialRiskyPath2  = str(content['trialRiskyPath2'])
+    tutorial_data.trialPathProb  = str(content['trialPathProb'])
+    tutorial_data.trialRT       = str(content['trialRT'])
+    tutorial_data.trialKeypress       = str(content['trialKeypress'])
+    tutorial_data.trialGambleChoice = str(content['trialGambleChoice'])
+    tutorial_data.trialPathProbChosen  = str(content['trialPathProbChosen'])
+    tutorial_data.trialPath     = str(content['trialPath'])
+    tutorial_data.trialPathPicWord  = str(content['trialPathPicWord'])
+    tutorial_data.trialPathIndx = str(content['trialPathIndx'])
+    tutorial_data.trialOutcomePicWord  = str(content['trialOutcomePicWord'])
+    tutorial_data.trialOutcomeIndx       = str(content['trialOutcomeIndx'])
+    tutorial_data.trialOutcomeValence       = str(content['trialOutcomeValence'])
+    tutorial_data.trialGambleChoice = str(content['trialGambleChoice'])
+    tutorial_data.trialOutcomeMag       = str(content['trialOutcomeMag'])
+    tutorial_data.trialOutcomeValue       = str(content['trialOutcomeValue'])
+    tutorial_data.trialCoins = str(content['trialCoins'])
 
     BaseObject.check_and_save(tutorial_data)
-
     result = dict({"success": "yes"})
-
     return jsonify(result)

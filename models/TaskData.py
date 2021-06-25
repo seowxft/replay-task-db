@@ -9,90 +9,149 @@ class TaskData(BaseObject, Model):
 
     id = Column(Integer, primary_key=True)
 
-    userID                = Column(Integer)
-    taskSessionTry        = Column(Text(length=10000))
-    trialNum              = Column(Text(length=10000))
-    trialTime             = Column(Text(length=10000))
-    blockNum              = Column(Text(length=10000))
-    trialinBlockNum       = Column(Text(length=10000))
-    devaluedBlock         = Column(Text(length=10000))
-    fixTime               = Column(Text(length=10000))
-    attenIndex            = Column(Text(length=10000))
-    attenCheckKey         = Column(Text(length=10000))
-    attenCheckTime        = Column(Text(length=10000))
-    stimIndex             = Column(Text(length=10000))
-    stimTime              = Column(Text(length=10000))
-    fbProbTrack           = Column(Text(length=10000))
-    randProb              = Column(Text(length=10000))
-    responseKey           = Column(Text(length=10000))
-    reactionTime          = Column(Text(length=10000))
-    responseAvoid         = Column(Text(length=10000))
-    playFbSound           = Column(Text(length=10000))
-    fbTime                = Column(Text(length=10000))
-
+    userID              = Column(Text(length=10000))
+    date                = Column(Text(length=10000))
+    startTime           = Column(Text(length=10000))
+    sectionTime         = Column(Text(length=10000))
+    taskSession         = Column(Text(length=10000))
+    taskSessionTry      = Column(Text(length=10000))
+    trialTime            = Column(Text(length=10000))
+    trialNum            = Column(Text(length=10000))
+    trialBlock            = Column(Text(length=10000))
+    trialNumInBlock            = Column(Text(length=10000))
+    trialForced         = Column(Text(length=10000))
+    trialShuttleWord     = Column(Text(length=10000))
+    trialShuttle        = Column(Text(length=10000))
+    trialShuttlePos     = Column(Text(length=10000))
+    trialShuttleProb     = Column(Text(length=10000))
+    trialLastStatePic   = Column(Text(length=10000))
+    trialOutcomePic      = Column(Text(length=10000))
+    trialOutcomeVal      = Column(Text(length=10000))
+    trialSafePath       = Column(Text(length=10000))
+    trialRiskyPath1     = Column(Text(length=10000))
+    trialRiskyPath2     = Column(Text(length=10000))
+    trialPathProb     = Column(Text(length=10000))
+    trialRT              = Column(Text(length=10000))
+    trialKeypress        = Column(Text(length=10000))
+    trialGambleChoice   = Column(Text(length=10000))
+    trialPathProbChosen        = Column(Text(length=10000))
+    trialPath           = Column(Text(length=10000))
+    trialPathPicWord    = Column(Text(length=10000))
+    trialPathIndx        = Column(Text(length=10000))
+    trialOutcomePicWord = Column(Text(length=10000))
+    trialOutcomeIndx     = Column(Text(length=10000))
+    trialOutcomeValence = Column(Text(length=10000))
+    trialOutcomeMag      = Column(Text(length=10000))
+    trialOutcomeValue   = Column(Text(length=10000))
+    trialCoins          = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
 
-    def get_user_id(self):
+    def get_userID(self):
         return str(self.userID)
 
-    def get_task_session_try(self):
-        return str(self.taskSessionTry)
+    def get_date(self):
+        return str(self.date)
 
-    def get_trial_no(self):
-        return str(self.trialNum)
+    def get_startTime(self):
+        return str(self.startTime)
+
+    def get_sectionTime(self):
+        return str(self.sectionTime)
+
+    def get_taskSession(self):
+        return str(self.taskSession)
+
+    def get_taskSessionTry(self):
+        return str(self.taskSessionTry)
 
     def get_trial_time(self):
         return str(self.trialTime)
 
-    def get_block_no(self):
-        return str(self.blockNum)
+    def get_trialNum(self):
+        return str(self.trialNum)
 
-    def get_trial_in_block_no(self):
-        return str(self.trialinBlockNum)
+    def get_trialBlock(self):
+        return str(self.trialBlock)
 
-    def get_devalued_block(self):
-        return str(self.devaluedBlock)
+    def get_trialNumInBlock(self):
+        return str(self.trialNumInBlock)
 
-    def get_fix_time(self):
-        return str(self.fixTime)
+    def get_trialForced(self):
+        return str(self.trialForced)
 
-    def get_atten_index(self):
-        return str(self.attenIndex)
+    def get_trialShuttleWord(self):
+        return str(self.trialShuttleWord)
 
-    def get_attencheck_key(self):
-        return str(self.attenCheckKey)
+    def get_trialShuttle(self):
+        return str(self.trialShuttle)
 
-    def get_attencheck_time(self):
-        return str(self.attenCheckTime)
+    def get_trialShuttlePos(self):
+        return str(self.trialShuttlePos)
 
-    def get_stim_index(self):
-        return str(self.stimIndex)
+    def get_trialShuttleProb(self):
+        return str(self.trialShuttleProb)
 
-    def get_stim_time(self):
-        return str(self.stimTime)
+    def get_trialLastStatePic(self):
+        return str(self.trialLastStatePic)
 
-    def get_fb_prob(self):
-        return str(self.fbProbTrack)
+    def get_trialOutcomePic(self):
+        return str(self.trialOutcomePic)
 
-    def get_rand_prob(self):
-        return str(self.randProb)
+    def get_trialOutcomeVal(self):
+        return str(self.trialOutcomeVal)
 
-    def get_response_key(self):
-        return str(self.responseKey)
+    def get_trialSafePath(self):
+        return str(self.trialSafePath)
 
-    def get_reaction_time(self):
-        return str(self.reactionTime)
+    def get_trialRiskyPath1(self):
+        return str(self.trialRiskyPath1)
 
-    def get_response_avoid(self):
-        return str(self.responseAvoid)
+    def get_trialRiskyPath2(self):
+        return str(self.trialRiskyPath2)
 
-    def get_fb_sound(self):
-        return str(self.playFbSound)
+    def get_trialRiskyPath2(self):
+        return str(self.trialPathProb)
 
-    def get_fb_time(self):
-        return str(self.fbTime)
+    def get_trialRT(self):
+        return str(self.trialRT)
+
+    def get_trialKeypress(self):
+        return str(self.trialKeypress)
+
+    def get_trialGambleChoice(self):
+        return str(self.trialGambleChoice)
+
+    def get_trialPathProbChosen(self):
+        return str(self.trialPathProbChosen)
+
+    def get_trialPath(self):
+        return str(self.trialPath)
+
+    def get_trialPathPicWord(self):
+        return str(self.trialPathPicWord)
+
+    def get_trialPathIndx(self):
+        return str(self.trialPathIndx)
+
+    def get_trialOutcomePicWord(self):
+        return str(self.trialOutcomePicWord)
+
+    def get_trialOutcomeIndx(self):
+        return str(self.trialOutcomeIndx)
+
+    def get_trialOutcomeValence(self):
+        return str(self.trialOutcomeValence)
+
+    def get_trialOutcomeMag(self):
+        return str(self.trialOutcomeMag)
+
+    def get_trialOutcomeValue(self):
+        return str(self.trialOutcomeValue)
+
+    def get_trialCoins(self):
+        return str(self.trialCoins)
 
     def errors(self):
         errors = super(TaskData, self).errors()

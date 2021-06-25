@@ -1,35 +1,49 @@
 """users routes"""
 from flask import current_app as app, jsonify, request
-from models import TaskData, BaseObject
+from models import TaskData, BaseObject, db
+from sqlalchemy.sql.expression import func
 
-
-@app.route('/task_data/<user_id>/', methods=['POST', 'GET'])
-
-def create_dataframe(user_id):
-
-    content     = request.json
-    task_data   = TaskData()
-
-    task_data.userID            = int(user_id)
-    task_data.trialTime         = str(content['trialTime'])
-    task_data.taskSessionTry    = str(content['taskSessionTry'])
-    task_data.trialNum          = str(content['trialNum'])
-    task_data.blockNum          = str(content['blockNum'])
-    task_data.trialinBlockNum   = str(content['trialinBlockNum'])
-    task_data.devaluedBlock     = str(content['devaluedBlock'])
-    task_data.attenIndex        = str(content['attenIndex'])
-    task_data.attenCheckKey     = str(content['attenCheckKey'])
-    task_data.attenCheckTime    = str(content['attenCheckTime'])
-    task_data.stimIndex         = str(content['stimIndex'])
-    task_data.fbProbTrack       = str(content['fbProbOri'])
-    task_data.randProb          = str(content['randProb'])
-    task_data.responseKey       = str(content['responseKey'])
-    task_data.reactionTime      = str(content['reactionTime'])
-    task_data.playFbSound       = str(content['trialinBlockNum'])
-
+@app.route('/task_data/<user_id>', methods=['POST', 'GET'])
+def create_task_data(user_id):
+    content = request.json
+    task_data = TaskData()
+    task_data.userID      = str(content['userID'])
+    task_data.date        = str(content['date'])
+    task_data.startTime   = str(content['startTime'])
+    task_data.sectionTime    = str(content['sectionTime'])
+    task_data.taskSession    = str(content['taskSession'])
+    task_data.taskSessionTry = str(content['taskSessionTry'])
+    task_data.trialTime  = str(content['trialTime'])
+    task_data.trialNum   = str(content['trialNum'])
+    task_data.trialBlock  = str(content['trialBlock'])
+    task_data.trialNumInBlock   = str(content['trialNumInBlock'])
+    task_data.trialForced    = str(content['trialForced'])
+    task_data.trialShuttleWord = str(content['trialShuttleWord'])
+    task_data.trialShuttle  = str(content['trialShuttle'])
+    task_data.trialShuttlePos = str(content['trialShuttlePos'])
+    task_data.trialShuttleProb     = str(content['trialShuttleProb'])
+    task_data.trialLastStatePic    = str(content['trialLastStatePic'])
+    task_data.trialOutcomePic  = str(content['trialOutcomePic'])
+    task_data.trialOutcomeVal     = str(content['trialOutcomeVal'])
+    task_data.trialSafePath  = str(content['trialSafePath'])
+    task_data.trialRiskyPath1 = str(content['trialRiskyPath1'])
+    task_data.trialRiskyPath2  = str(content['trialRiskyPath2'])
+    task_data.trialPathProb  = str(content['trialPathProb'])
+    task_data.trialRT       = str(content['trialRT'])
+    task_data.trialKeypress       = str(content['trialKeypress'])
+    task_data.trialGambleChoice = str(content['trialGambleChoice'])
+    task_data.trialPathProbChosen  = str(content['trialPathProbChosen'])
+    task_data.trialPath     = str(content['trialPath'])
+    task_data.trialPathPicWord  = str(content['trialPathPicWord'])
+    task_data.trialPathIndx = str(content['trialPathIndx'])
+    task_data.trialOutcomePicWord  = str(content['trialOutcomePicWord'])
+    task_data.trialOutcomeIndx       = str(content['trialOutcomeIndx'])
+    task_data.trialOutcomeValence       = str(content['trialOutcomeValence'])
+    task_data.trialGambleChoice = str(content['trialGambleChoice'])
+    task_data.trialOutcomeMag       = str(content['trialOutcomeMag'])
+    task_data.trialOutcomeValue       = str(content['trialOutcomeValue'])
+    task_data.trialCoins = str(content['trialCoins'])
 
     BaseObject.check_and_save(task_data)
-
     result = dict({"success": "yes"})
-
     return jsonify(result)
