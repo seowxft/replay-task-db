@@ -32,6 +32,7 @@ class CondData(BaseObject, Model):
     tutRiskyPathProb1          = Column(Text(length=10000))
     tutRiskyPathProb2          = Column(Text(length=10000))
     tutOptChoice          = Column(Text(length=10000))
+    tutForceChoice          = Column(Text(length=10000))
     taskSafePathOutcome           = Column(Text(length=10000))
     taskRiskyPathOutcome1          = Column(Text(length=10000))
     taskRiskyPathOutcome2          = Column(Text(length=10000))
@@ -39,6 +40,7 @@ class CondData(BaseObject, Model):
     taskRiskyPathProb1          = Column(Text(length=10000))
     taskRiskyPathProb2          = Column(Text(length=10000))
     taskOptChoice          = Column(Text(length=10000))
+    taskForceChoice          = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -112,6 +114,9 @@ class CondData(BaseObject, Model):
     def get_tutOptChoice(self):
         return str(self.tutOptChoice)
 
+    def get_tutForceChoice(self):
+        return str(self.tutForceChoice)
+
     def get_taskSafePathOutcome(self):
         return str(self.taskSafePathOutcome)
 
@@ -132,6 +137,9 @@ class CondData(BaseObject, Model):
 
     def get_taskOptChoice(self):
         return str(self.taskOptChoice)
+
+    def get_taskForceChoice(self):
+        return str(self.taskForceChoice)
 
     def errors(self):
         errors = super(CondData, self).errors()

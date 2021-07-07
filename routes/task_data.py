@@ -42,6 +42,7 @@ def create_task_data(user_id):
     task_data.trialGambleChoice = str(content['trialGambleChoice'])
     task_data.trialOutcomeMag       = str(content['trialOutcomeMag'])
     task_data.trialOutcomeValue       = str(content['trialOutcomeValue'])
+    task_data.trialOptimalChoice       = str(content['trialOptimalChoice'])
     task_data.trialCoins = str(content['trialCoins'])
 
     BaseObject.check_and_save(task_data)

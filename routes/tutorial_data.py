@@ -40,6 +40,7 @@ def create_tutorial_data(user_id):
     tutorial_data.trialGambleChoice = str(content['trialGambleChoice'])
     tutorial_data.trialOutcomeMag       = str(content['trialOutcomeMag'])
     tutorial_data.trialOutcomeValue       = str(content['trialOutcomeValue'])
+    tutorial_data.trialOptimalChoice       = str(content['trialOptimalChoice'])
     tutorial_data.trialCoins = str(content['trialCoins'])
 
     BaseObject.check_and_save(tutorial_data)

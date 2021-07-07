@@ -41,6 +41,7 @@ class TutorialData(BaseObject, Model):
     trialOutcomeValence = Column(Text(length=10000))
     trialOutcomeMag      = Column(Text(length=10000))
     trialOutcomeValue   = Column(Text(length=10000))
+    trialOptimalChoice   = Column(Text(length=10000))
     trialCoins          = Column(Text(length=10000))
 
     def get_id(self):
@@ -142,6 +143,9 @@ class TutorialData(BaseObject, Model):
     def get_trialOutcomeValue(self):
         return str(self.trialOutcomeValue)
 
+    def get_trialOptimalChoice(self):
+        return str(self.trialOptimalChoice)
+        
     def get_trialCoins(self):
         return str(self.trialCoins)
 
