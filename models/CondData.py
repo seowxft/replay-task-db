@@ -13,6 +13,7 @@ class CondData(BaseObject, Model):
     date                = Column(Text(length=10000))
     startTime           = Column(Text(length=10000))
     sessionTime          = Column(Text(length=10000))
+    trialTime          = Column(Text(length=10000))
     taskSession         = Column(Text(length=10000))
     taskSessionTry      = Column(Text(length=10000))
     structNum      = Column(Text(length=10000))
@@ -56,6 +57,9 @@ class CondData(BaseObject, Model):
 
     def get_sectionTime(self):
         return str(self.sectionTime)
+
+    def get_trialTime(self):
+        return str(self.trialTime)
 
     def get_startTime(self):
         return str(self.taskSession)

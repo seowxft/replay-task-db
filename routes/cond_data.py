@@ -11,6 +11,7 @@ def create_cond_data(user_id):
     cond_data.date        = str(content['date'])
     cond_data.startTime   = str(content['startTime'])
     cond_data.sectionTime   = str(content['sectionTime'])
+    cond_data.trialTime   = str(content['trialTime'])
     cond_data.taskSession   = str(content['taskSession'])
     cond_data.taskSessionTry = str(content['taskSessionTry'])
     cond_data.structNum = str(content['structNum'])
