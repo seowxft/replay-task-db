@@ -28,6 +28,17 @@ class TutorialData(BaseObject, Model):
     trialSafePath       = Column(Text(length=10000))
     trialRiskyPath1     = Column(Text(length=10000))
     trialRiskyPath2     = Column(Text(length=10000))
+    trialSafeProb         = Column(Text(length=10000))
+    trialRiskyProb1     = Column(Text(length=10000))
+    trialRiskyProb2        = Column(Text(length=10000))
+    trialSafeValue     = Column(Text(length=10000))
+    trialRiskyValue1     = Column(Text(length=10000))
+    trialRiskyValue2   = Column(Text(length=10000))
+    trialSafePathEV      = Column(Text(length=10000))
+    trialRiskyPathEV1      = Column(Text(length=10000))
+    trialRiskyPathEV2       = Column(Text(length=10000))
+    trialGambleEV     = Column(Text(length=10000))
+    trialChoiceEV     = Column(Text(length=10000))
     trialPathProb     = Column(Text(length=10000))
     trialRT              = Column(Text(length=10000))
     trialKeypress        = Column(Text(length=10000))
@@ -104,8 +115,42 @@ class TutorialData(BaseObject, Model):
     def get_trialRiskyPath2(self):
         return str(self.trialRiskyPath2)
 
-    def get_trialRiskyPath2(self):
+    def get_trialPathProb(self):
         return str(self.trialPathProb)
+
+    def get_trialSafeProb(self):
+        return str(self.trialSafeProb)
+
+    def get_trialRiskyProb1(self):
+        return str(self.trialRiskyProb1)
+
+    def get_trialRiskyProb2(self):
+        return str(self.trialRiskyProb2)
+
+    def get_trialSafeValue(self):
+        return str(self.trialSafeValue)
+
+    def get_trialRiskyValue1(self):
+        return str(self.trialRiskyValue1)
+
+    def get_trialRiskyValue2(self):
+        return str(self.trialRiskyValue2)
+
+    def get_trialSafePathEV(self):
+        return str(self.trialSafePathEV)
+
+    def get_trialRiskyPathEV1(self):
+        return str(self.trialRiskyPathEV1)
+
+    def get_trialRiskyPathEV2h(self):
+        return str(self.trialRiskyPathEV2)
+
+    def get_trialGambleEV(self):
+        return str(self.trialGambleEV)
+
+    def get_trialChoiceEV(self):
+        return str(self.trialChoiceEV)
+
 
     def get_trialRT(self):
         return str(self.trialRT)
@@ -145,7 +190,7 @@ class TutorialData(BaseObject, Model):
 
     def get_trialOptimalChoice(self):
         return str(self.trialOptimalChoice)
-        
+
     def get_trialCoins(self):
         return str(self.trialCoins)
 
