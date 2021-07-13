@@ -26,7 +26,6 @@ def create_tutorial_data(user_id):
     tutorial_data.trialSafePath  = str(content['trialSafePath'])
     tutorial_data.trialRiskyPath1 = str(content['trialRiskyPath1'])
     tutorial_data.trialRiskyPath2  = str(content['trialRiskyPath2'])
-
     tutorial_data.trialSafeProb    = str(content['trialSafeProb'])
     tutorial_data.trialRiskyProb1 = str(content['trialRiskyProb1'])
     tutorial_data.trialRiskyProb2  = str(content['trialRiskyProb2'])
@@ -38,7 +37,12 @@ def create_tutorial_data(user_id):
     tutorial_data.trialRiskyPathEV2  = str(content['trialRiskyPathEV2'])
     tutorial_data.trialGambleEV = str(content['trialGambleEV'])
     tutorial_data.trialChoiceEV  = str(content['trialChoiceEV'])
-
+    tutorial_data.trialPlan  = str(content['trialPlan'])
+    tutorial_data.trialPlanRT       = str(content['trialPlanRT'])
+    tutorial_data.trialPlanChoice       = str(content['trialPlanChoice'])
+    tutorial_data.trialPlanChoiceWords = str(content['trialPlanChoiceWords'])
+    tutorial_data.trialPlanPathChosen = str(content['trialPlanPathChosen'])
+    tutorial_data.trialPlanCor  = str(content['trialPlanCor'])
     tutorial_data.trialPathProb  = str(content['trialPathProb'])
     tutorial_data.trialRT       = str(content['trialRT'])
     tutorial_data.trialKeypress       = str(content['trialKeypress'])

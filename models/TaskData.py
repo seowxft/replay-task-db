@@ -43,6 +43,13 @@ class TaskData(BaseObject, Model):
     trialGambleEV     = Column(Text(length=10000))
     trialChoiceEV     = Column(Text(length=10000))
 
+    trialPlan     = Column(Text(length=10000))
+    trialPlanRT              = Column(Text(length=10000))
+    trialPlanChoice        = Column(Text(length=10000))
+    trialPlanChoiceWords   = Column(Text(length=10000))
+    trialPlanPathChosen      = Column(Text(length=10000))
+    trialPlanCor        = Column(Text(length=10000))
+
     trialPathProb     = Column(Text(length=10000))
     trialRT              = Column(Text(length=10000))
     trialKeypress        = Column(Text(length=10000))
@@ -126,7 +133,6 @@ class TaskData(BaseObject, Model):
         return str(self.trialRiskyPath2)
 
 
-
     def get_trialSafeProb(self):
         return str(self.trialSafeProb)
 
@@ -160,6 +166,23 @@ class TaskData(BaseObject, Model):
     def get_trialChoiceEV(self):
         return str(self.trialChoiceEV)
 
+    def get_trialPlan(self):
+        return str(self.trialPlan)
+
+    def get_trialPlanRT(self):
+        return str(self.trialPlanRT)
+
+    def get_trialPlanChoice(self):
+        return str(self.trialPlanChoice)
+
+    def get_trialPlanChoiceWords(self):
+        return str(self.trialPlanChoiceWords)
+
+    def get_trialPlanPathChosen(self):
+        return str(self.trialPlanPathChosen)
+
+    def get_trialPlanCor(self):
+        return str(self.trialPlanCor)
 
 
     def get_trialPathProb(self):

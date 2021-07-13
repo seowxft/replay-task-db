@@ -41,6 +41,13 @@ def create_task_data(user_id):
     task_data.trialGambleEV = str(content['trialGambleEV'])
     task_data.trialChoiceEV  = str(content['trialChoiceEV'])
 
+    task_data.trialPlan  = str(content['trialPlan'])
+    task_data.trialPlanRT       = str(content['trialPlanRT'])
+    task_data.trialPlanChoice       = str(content['trialPlanChoice'])
+    task_data.trialPlanChoiceWords = str(content['trialPlanChoiceWords'])
+    task_data.trialPlanPathChosen = str(content['trialPlanPathChosen'])
+    task_data.trialPlanCor  = str(content['trialPlanCor'])
+
     task_data.trialPathProb  = str(content['trialPathProb'])
     task_data.trialRT       = str(content['trialRT'])
     task_data.trialKeypress       = str(content['trialKeypress'])

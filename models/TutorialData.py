@@ -39,6 +39,12 @@ class TutorialData(BaseObject, Model):
     trialRiskyPathEV2       = Column(Text(length=10000))
     trialGambleEV     = Column(Text(length=10000))
     trialChoiceEV     = Column(Text(length=10000))
+    trialPlan     = Column(Text(length=10000))
+    trialPlanRT              = Column(Text(length=10000))
+    trialPlanChoice        = Column(Text(length=10000))
+    trialPlanChoiceWords   = Column(Text(length=10000))
+    trialPlanPathChosen      = Column(Text(length=10000))
+    trialPlanCor        = Column(Text(length=10000))
     trialPathProb     = Column(Text(length=10000))
     trialRT              = Column(Text(length=10000))
     trialKeypress        = Column(Text(length=10000))
@@ -115,9 +121,6 @@ class TutorialData(BaseObject, Model):
     def get_trialRiskyPath2(self):
         return str(self.trialRiskyPath2)
 
-    def get_trialPathProb(self):
-        return str(self.trialPathProb)
-
     def get_trialSafeProb(self):
         return str(self.trialSafeProb)
 
@@ -142,7 +145,7 @@ class TutorialData(BaseObject, Model):
     def get_trialRiskyPathEV1(self):
         return str(self.trialRiskyPathEV1)
 
-    def get_trialRiskyPathEV2h(self):
+    def get_trialRiskyPathEV2(self):
         return str(self.trialRiskyPathEV2)
 
     def get_trialGambleEV(self):
@@ -151,6 +154,26 @@ class TutorialData(BaseObject, Model):
     def get_trialChoiceEV(self):
         return str(self.trialChoiceEV)
 
+    def get_trialPlan(self):
+        return str(self.trialPlan)
+
+    def get_trialplanRT(self):
+        return str(self.trialPlanRT)
+
+    def get_trialPlanChoice(self):
+        return str(self.trialPlanChoice)
+
+    def get_trialPlanChoiceWords(self):
+        return str(self.trialPlanChoiceWords)
+
+    def get_trialPlanPathChosen(self):
+        return str(self.trialPlanPathChosen)
+
+    def get_trialPlanCor(self):
+        return str(self.trialPlanCor)
+
+    def get_trialPathProb(self):
+        return str(self.trialPathProb)
 
     def get_trialRT(self):
         return str(self.trialRT)
