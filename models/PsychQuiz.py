@@ -21,12 +21,20 @@ class PsychQuiz(BaseObject, Model):
     PgFinish_STAI_Y2  = Column(Text(length=10000))
     PgFinish_BIS11    = Column(Text(length=10000))
     PgFinish_SDS      = Column(Text(length=10000))
+    PgFinish_OBQ20    = Column(Text(length=10000))
+    PgFinish_WDQSF    = Column(Text(length=10000))
+    PgFinish_IQ_1    = Column(Text(length=10000))
+    PgFinish_IQ_2      = Column(Text(length=10000))
     PgRT_demo        = Column(Text(length=10000))
     PgRT_OCIR        = Column(Text(length=10000))
     PgRT_STAI_Y1     = Column(Text(length=10000))
     PgRT_STAI_Y2     = Column(Text(length=10000))
     PgRT_BIS11       = Column(Text(length=10000))
     PgRT_SDS         = Column(Text(length=10000))
+    PgRT_OBQ20       = Column(Text(length=10000))
+    PgRT_WDQSF       = Column(Text(length=10000))
+    PgRT_IQ_1       = Column(Text(length=10000))
+    PgRT_IQ_2        = Column(Text(length=10000))
     age              = Column(Text(length=10000))
     gender           = Column(Text(length=10000))
     OCIR             = Column(Text(length=10000))
@@ -34,7 +42,10 @@ class PsychQuiz(BaseObject, Model):
     STAI_Y2          = Column(Text(length=10000))
     BIS11            = Column(Text(length=10000))
     SDS              = Column(Text(length=10000))
-
+    OBQ20              = Column(Text(length=10000))
+    WDQSF              = Column(Text(length=10000))
+    IQ_1              = Column(Text(length=10000))
+    IQ_2              = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -75,6 +86,18 @@ class PsychQuiz(BaseObject, Model):
     def get_pg5_finish(self):
         return str(self.PgFinish_SDS)
 
+    def get_pg6_finish(self):
+        return str(self.PgFinish_OBQ20)
+
+    def get_pg7_finish(self):
+        return str(self.PgFinish_WDQSF)
+
+    def get_pg8_finish(self):
+        return str(self.PgFinish_IQ_1)
+
+    def get_pg9_finish(self):
+        return str(self.PgFinish_IQ_2)
+
     def get_pg0_rt(self):
         return str(self.PgRT_demo)
 
@@ -92,6 +115,18 @@ class PsychQuiz(BaseObject, Model):
 
     def get_pg5_rt(self):
         return str(self.PgRT_SDS)
+
+    def get_pg6_rt(self):
+        return str(self.PgRT_OBQ20)
+
+    def get_pg7_rt(self):
+        return str(self.PgRT_WDQSF)
+
+    def get_pg8_rt(self):
+        return str(self.PgRT_IQ_1)
+
+    def get_pg9_rt(self):
+        return str(self.PgRT_IQ_2)
 
     def get_age(self):
         return str(self.age)
@@ -113,6 +148,18 @@ class PsychQuiz(BaseObject, Model):
 
     def get_sds(self):
         return str(self.SDS)
+
+    def get_obq(self):
+        return str(self.OBQ20)
+
+    def get_wdqsf(self):
+        return str(self.WDQSF)
+
+    def get_iq1(self):
+        return str(self.IQ_1)
+
+    def get_iq2(self):
+        return str(self.IQ_2)
 
     def errors(self):
         errors = super(PsychQuiz, self).errors()
