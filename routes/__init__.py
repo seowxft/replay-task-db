@@ -3,6 +3,7 @@ import routes.cond_data
 import routes.outcome_test
 import routes.path_test
 import routes.tutorial_data
+import routes.quiz_test
 import routes.task_data
 import routes.bonus
 import routes.psych_quiz

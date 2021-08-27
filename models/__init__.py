@@ -10,6 +10,7 @@ from models.TutorialData import TutorialData
 from models.TaskData import TaskData
 from models.Bonus import Bonus
 from models.PsychQuiz import PsychQuiz
+from models.QuizTest import QuizTest
 from models.Feedback import Feedback
 
 __all__ = (
@@ -19,6 +20,7 @@ __all__ = (
     'OutcomeTest',
     'PathTest',
     'TutorialData',
+    'QuizTest',
     'TaskData',
     'Bonus',
     'PsychQuiz',
