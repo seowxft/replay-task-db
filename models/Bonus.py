@@ -17,7 +17,8 @@ class Bonus(BaseObject, Model):
     taskSessionTry         = Column(Text(length=10000))
     taskCoins         = Column(Text(length=10000))
     taskBonus         = Column(Text(length=10000))
-
+    structNum         = Column(Text(length=10000))
+    maxCoins         = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -45,6 +46,12 @@ class Bonus(BaseObject, Model):
 
     def get_taskBonus(self):
         return str(self.taskBonus)
+
+    def get_structNum(self):
+        return str(self.structNum)
+
+    def get_maxCoins(self):
+        return str(self.maxCoins)
 
     def errors(self):
         errors = super(Bonus, self).errors()

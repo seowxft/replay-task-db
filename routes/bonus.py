@@ -15,6 +15,8 @@ def create_bonus_data(user_id):
     bonus_data.taskSessionTry = str(content['taskSessionTry'])
     bonus_data.taskCoins = str(content['taskCoins'])
     bonus_data.taskBonus = str(content['taskBonus'])
+    bonus_data.structNum = str(content['structNum'])
+    bonus_data.maxCoins = str(content['maxCoins'])
 
     BaseObject.check_and_save(bonus_data)
     result = dict({"success": "yes"})
