@@ -23,8 +23,8 @@ class PsychQuiz(BaseObject, Model):
     PgFinish_SDS      = Column(Text(length=10000))
     PgFinish_OBQ20    = Column(Text(length=10000))
     PgFinish_WDQSF    = Column(Text(length=10000))
-    PgFinish_IQ_1    = Column(Text(length=10000))
-    PgFinish_IQ_2      = Column(Text(length=10000))
+    PgFinish_IQ_text     = Column(Text(length=10000))
+    PgFinish_IQ_image      = Column(Text(length=10000))
     PgRT_demo        = Column(Text(length=10000))
     PgRT_OCIR        = Column(Text(length=10000))
     PgRT_STAI_Y1     = Column(Text(length=10000))
@@ -33,8 +33,8 @@ class PsychQuiz(BaseObject, Model):
     PgRT_SDS         = Column(Text(length=10000))
     PgRT_OBQ20       = Column(Text(length=10000))
     PgRT_WDQSF       = Column(Text(length=10000))
-    PgRT_IQ_1       = Column(Text(length=10000))
-    PgRT_IQ_2        = Column(Text(length=10000))
+    PgRT_IQ_text       = Column(Text(length=10000))
+    PgRT_IQ_image        = Column(Text(length=10000))
     age              = Column(Text(length=10000))
     gender           = Column(Text(length=10000))
     OCIR             = Column(Text(length=10000))
@@ -46,6 +46,20 @@ class PsychQuiz(BaseObject, Model):
     WDQSF              = Column(Text(length=10000))
     IQ_1              = Column(Text(length=10000))
     IQ_2              = Column(Text(length=10000))
+    IQ_3              = Column(Text(length=10000))
+    IQ_4              = Column(Text(length=10000))
+    IQ_5              = Column(Text(length=10000))
+    IQ_6              = Column(Text(length=10000))
+    IQ_7              = Column(Text(length=10000))
+    IQ_8              = Column(Text(length=10000))
+    IQimage_1              = Column(Text(length=10000))
+    IQimage_2              = Column(Text(length=10000))
+    IQimage_3              = Column(Text(length=10000))
+    IQimage_4              = Column(Text(length=10000))
+    IQimage_5              = Column(Text(length=10000))
+    IQimage_6              = Column(Text(length=10000))
+    IQimage_7              = Column(Text(length=10000))
+    IQimage_8              = Column(Text(length=10000))
 
     def get_id(self):
         return str(self.id)
@@ -93,10 +107,10 @@ class PsychQuiz(BaseObject, Model):
         return str(self.PgFinish_WDQSF)
 
     def get_pg8_finish(self):
-        return str(self.PgFinish_IQ_1)
+        return str(self.PgFinish_IQ_text)
 
     def get_pg9_finish(self):
-        return str(self.PgFinish_IQ_2)
+        return str(self.PgFinish_IQ_image)
 
     def get_pg0_rt(self):
         return str(self.PgRT_demo)
@@ -123,10 +137,10 @@ class PsychQuiz(BaseObject, Model):
         return str(self.PgRT_WDQSF)
 
     def get_pg8_rt(self):
-        return str(self.PgRT_IQ_1)
+        return str(self.PgRT_IQ_text)
 
     def get_pg9_rt(self):
-        return str(self.PgRT_IQ_2)
+        return str(self.PgRT_IQ_image)
 
     def get_age(self):
         return str(self.age)
@@ -158,8 +172,45 @@ class PsychQuiz(BaseObject, Model):
     def get_iq1(self):
         return str(self.IQ_1)
 
-    def get_iq2(self):
-        return str(self.IQ_2)
+    def get_iq3(self):
+        return str(self.IQ_3)
+
+    def get_iq4(self):
+        return str(self.IQ_4)
+
+    def get_iq5(self):
+        return str(self.IQ_5)
+
+    def get_iq6(self):
+        return str(self.IQ_6)
+
+    def get_iq7(self):
+        return str(self.IQ_7)
+
+    def get_iq8(self):
+        return str(self.IQ_8)
+
+    def get_iqimage1(self):
+        return str(self.IQimage_1)
+
+    def get_iqimage3(self):
+        return str(self.IQimage_3)
+
+    def get_iqimage4(self):
+        return str(self.IQimage_4)
+
+    def get_iqimage5(self):
+        return str(self.IQimage_5)
+
+    def get_iqimage6(self):
+        return str(self.IQimage_6)
+
+    def get_iqimage7(self):
+        return str(self.IQimage_7)
+
+    def get_iqimage8(self):
+        return str(self.IQimage_8)
+
 
     def errors(self):
         errors = super(PsychQuiz, self).errors()
