@@ -53,6 +53,7 @@ class TutorialData(BaseObject, Model):
     trialPath           = Column(Text(length=10000))
     trialPathPicWord    = Column(Text(length=10000))
     trialPathIndx        = Column(Text(length=10000))
+    trialPathRoute        = Column(Text(length=10000))
     trialOutcomePicWord = Column(Text(length=10000))
     trialOutcomeIndx     = Column(Text(length=10000))
     trialOutcomeValence = Column(Text(length=10000))
@@ -195,6 +196,9 @@ class TutorialData(BaseObject, Model):
 
     def get_trialPathIndx(self):
         return str(self.trialPathIndx)
+
+    def get_trialPathRoute(self):
+        return str(self.trialPathRoute)
 
     def get_trialOutcomePicWord(self):
         return str(self.trialOutcomePicWord)

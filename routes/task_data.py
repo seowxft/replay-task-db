@@ -56,6 +56,7 @@ def create_task_data(user_id):
     task_data.trialPath     = str(content['trialPath'])
     task_data.trialPathPicWord  = str(content['trialPathPicWord'])
     task_data.trialPathIndx = str(content['trialPathIndx'])
+    task_data.trialPathRoute = str(content['trialPathRoute'])
     task_data.trialOutcomePicWord  = str(content['trialOutcomePicWord'])
     task_data.trialOutcomeIndx       = str(content['trialOutcomeIndx'])
     task_data.trialOutcomeValence       = str(content['trialOutcomeValence'])

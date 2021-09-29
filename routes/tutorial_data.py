@@ -51,6 +51,7 @@ def create_tutorial_data(user_id):
     tutorial_data.trialPath     = str(content['trialPath'])
     tutorial_data.trialPathPicWord  = str(content['trialPathPicWord'])
     tutorial_data.trialPathIndx = str(content['trialPathIndx'])
+    tutorial_data.trialPathRoute = str(content['trialPathRoute'])
     tutorial_data.trialOutcomePicWord  = str(content['trialOutcomePicWord'])
     tutorial_data.trialOutcomeIndx       = str(content['trialOutcomeIndx'])
     tutorial_data.trialOutcomeValence       = str(content['trialOutcomeValence'])
