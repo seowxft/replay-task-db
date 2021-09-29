@@ -42,6 +42,7 @@ def create_tutorial_data(user_id):
     tutorial_data.trialPlanChoice       = str(content['trialPlanChoice'])
     tutorial_data.trialPlanChoiceWords = str(content['trialPlanChoiceWords'])
     tutorial_data.trialPlanPathChosen = str(content['trialPlanPathChosen'])
+    tutorial_data.trialPlanPathIndxChosen = str(content['trialPlanPathIndxChosen'])
     tutorial_data.trialPlanPathChosenProb = str(content['trialPlanPathChosenProb'])
     tutorial_data.trialPlanCor  = str(content['trialPlanCor'])
     tutorial_data.trialPathProb  = str(content['trialPathProb'])

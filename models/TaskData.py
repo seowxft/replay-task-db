@@ -48,6 +48,7 @@ class TaskData(BaseObject, Model):
     trialPlanChoice        = Column(Text(length=10000))
     trialPlanChoiceWords   = Column(Text(length=10000))
     trialPlanPathChosen      = Column(Text(length=10000))
+    trialPlanPathIndxChosen  = Column(Text(length=10000))
     trialPlanPathChosenProb  = Column(Text(length=10000))
     trialPlanCor        = Column(Text(length=10000))
 
@@ -182,6 +183,9 @@ class TaskData(BaseObject, Model):
 
     def get_trialPlanPathChosen(self):
         return str(self.trialPlanPathChosen)
+
+    def get_trialPlanPathIndxChosen(self):
+        return str(self.trialPlanPathIndxChosen)
 
     def get_trialPlanPathChosenProb(self):
         return str(self.trialPlanPathChosenProb)

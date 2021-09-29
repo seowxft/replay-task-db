@@ -46,6 +46,7 @@ def create_task_data(user_id):
     task_data.trialPlanChoice       = str(content['trialPlanChoice'])
     task_data.trialPlanChoiceWords = str(content['trialPlanChoiceWords'])
     task_data.trialPlanPathChosen = str(content['trialPlanPathChosen'])
+    task_data.trialPlanPathIndxChosen = str(content['trialPlanPathIndxChosen'])
     task_data.trialPlanPathChosenProb = str(content['trialPlanPathChosenProb'])
     task_data.trialPlanCor  = str(content['trialPlanCor'])
 
