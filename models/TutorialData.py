@@ -44,6 +44,7 @@ class TutorialData(BaseObject, Model):
     trialPlanChoice        = Column(Text(length=10000))
     trialPlanChoiceWords   = Column(Text(length=10000))
     trialPlanPathChosen      = Column(Text(length=10000))
+    trialPlanPathChosenProb = Column(Text(length=10000))
     trialPlanCor        = Column(Text(length=10000))
     trialPathProb     = Column(Text(length=10000))
     trialRT              = Column(Text(length=10000))
@@ -169,6 +170,9 @@ class TutorialData(BaseObject, Model):
 
     def get_trialPlanPathChosen(self):
         return str(self.trialPlanPathChosen)
+
+    def get_trialPlanPathChosenProb(self):
+        return str(self.trialPlanPathChosenProb)
 
     def get_trialPlanCor(self):
         return str(self.trialPlanCor)
